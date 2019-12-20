@@ -20,6 +20,7 @@ class AuthorController extends Controller
 
     public function __construct(AuthorService $authorService)
     {
+        // dd($authorService);
         $this->authorService = $authorService;
     }
 

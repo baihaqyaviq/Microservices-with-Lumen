@@ -18,7 +18,6 @@ class AuthorController extends Controller
      */
     public function __construct()
     {
-        //
     }
 
     /**

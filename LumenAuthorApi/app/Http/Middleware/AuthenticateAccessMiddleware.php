@@ -17,6 +17,9 @@ class AuthenticateAccessMiddleware
     public function handle($request, Closure $next)
     {
         $validSecrets = explode(',', env('ACCEPTED_SECRETS'));
+
+        // dd(in_array($request->header('Authorization'), $validSecrets));
+        
         if(in_array($request->header('Authorization'), $validSecrets))
         {
             return $next($request);
